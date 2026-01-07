@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('PhoneBook') }}
+            {{ __('Add Contacts') }}
         </h2>
     </x-slot>
 
@@ -36,14 +36,14 @@
 
                         <div class="form-group">
                             <label for="group_name">Group Name (Optional)</label>
-                            <select id="group_name" name="group_name" class="form-control">
-                                <option selected>...</option>
+                            <select id="group_name" name="group_name" class="form-control rounded-0">
+                                <option selected>Please select one</option>
                                 <option value="family">Family</option>
                                 <option value="friends">Friends</option>
                                 <option value="colleagues">Colleagues</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-success">Save</button>
+                        <button type="submit" class="btn btn-outline-success rounded-0">Add</button>
                     </form>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('PhoneBook') }}
+            {{ __('Your Contacts') }}
         </h2>
     </x-slot>
 
@@ -9,11 +9,13 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
-                    <nav class="navbar navbar-light bg-light float-right">
+                    <nav class="navbar navbar-light float-right">
                         <form class="form-inline" method="POST" action="{{route('search.contact')}}">
                             @csrf
-                            <input class="form-control mr-sm-2" type="search" placeholder="Mobile" name="mobile" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Mobile" name="mobile" aria-label="Search">
+                                <button class="btn btn-outline-success rounded-0" type="submit">Search</button>
+                            </div>
                         </form>
                     </nav>
                     <table class="table">
